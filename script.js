@@ -21,29 +21,53 @@ function onSubmit(event){
 
     //retrieving the user entry
     let compo= retrieve(); 
-    console.log(compo); 
+    //console.log(compo); 
     
     //converting the user's entry into an array
     stringToArray= (composition) => composition.split(/[,.]/g).map(item => item.trim());
     let compoArray= stringToArray(compo); 
-    console.log(compoArray); 
+    //console.log(compoArray); 
 
     //comparing the user's entry with the ingredients array 
     // console.log(ingredients); 
+    let result=  document.getElementById('ingredients');
     for (let i= 0; i < ingredients.length; i++){
-        console.log(`Comedogenic ingredient : ${ingredients[i][0]}`); 
+         
         let comedogenicIngredient= ingredients[i][0];
+        let comedogenicRate= ingredients[i][1]; 
+        let irritationRate= ingredients[i][2]; 
+
+        //console.log(`Ingredient from the list : ${comedogenicIngredient}, comedogenic rate : ${comedogenicRate}, irritation rate : ${irritationRate}`); 
 
         for (let i=0; i < compoArray.length; i++){
-            console.log(compoArray[i]); 
+            let userEntryIngredient= compoArray[i];
+            console.log(userEntryIngredient); 
+            //is there any ingredients in the user's entry that matches our list of comedogenic ingredients ? 
+            if (comedogenicIngredient === userEntryIngredient){
+                //Yes, so if it's comedogenic, we display it and we show its comedogenic rate 
+                if (comedogenicRate > 0){
+                    console.log("This user's entry ingredient is comedogenic"); 
+                    result.innerHTML+= `<p>${comedogenicIngredient}, comedogenic rate : ${comedogenicRate}</p>`; 
+                }
+                //And if the ingredient is irritating, we display it and we show its irritation rate 
+                if (irritationRate > 0){
+                    console.log("This user's entry ingredient is irritating");
+                    result.innerHTML+= `${comedogenicIngredient}, irritation rate : ${irritationRate}`;  
+                };
 
-            if (comedogenicIngredient === compoArray[i]){
-                console.log("There is a comedogenic ingredient in the user's entry"); 
-            };
-        };
+            }
 
-    };
-   
+        }//end of the user's entry loop
+
+    }//end of the ingredient list loop
+
+    //Once the comparison is done, if no matching ingredient is found, we want to inform the user that the composition of the product they entered is suitable for acne prone skin
+    if (result.innerHTML === ""){
+
+        result.innerHTML= "There is no comedogenic nor irritaing ingredient in the product you entered !"; 
+        console.log("empty"); 
+     }
+
 };
 
 
