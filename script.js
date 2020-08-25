@@ -34,6 +34,7 @@ function onSubmit(event){
     for (let i= 0; i < ingredients.length; i++){
          
         let comedogenicIngredient= ingredients[i][0];
+        console.log(comedogenicIngredient); 
         let comedogenicRate= ingredients[i][1]; 
         let irritationRate= ingredients[i][2]; 
 
@@ -47,12 +48,12 @@ function onSubmit(event){
                 //Yes, so if it's comedogenic, we display it and we show its comedogenic rate 
                 if (comedogenicRate > 0){
                     console.log("This user's entry ingredient is comedogenic"); 
-                    result.innerHTML+= `<p>${comedogenicIngredient}, comedogenic rate : ${comedogenicRate}</p>`; 
+                    result.innerHTML+= `<p>${comedogenicIngredient.toUpperCase()}, comedogenic rate : ${comedogenicRate}</p>`; 
                 }
                 //And if the ingredient is irritating, we display it and we show its irritation rate 
                 if (irritationRate > 0){
                     console.log("This user's entry ingredient is irritating");
-                    result.innerHTML+= `${comedogenicIngredient}, irritation rate : ${irritationRate}`;  
+                    result.innerHTML+= `${comedogenicIngredient.toUpperCase()}, irritation rate : ${irritationRate}`;  
                 };
 
             }

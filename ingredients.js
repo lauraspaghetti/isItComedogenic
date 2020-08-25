@@ -28,127 +28,75 @@ let ingredients = [
     ["decyl oleate", 4, 0],
     ["dioctyl succinate", 4, 0],
     ["disodium monooleamido peg 2-", 4, 0],
-    ["Sulfosuccinate", 4, 0],
-    ["Ethanol", 4, 0],
-    ["Ethoxylated Lanolin", 4, 0],
-    ["Ethyl Alcohol", 4, 0],
-    ["Ethyllhexyl Palmitate", 4, 0],
-    ["Flower of Sulfur", 4, 0],
-    ["Glyceryl Stereate SE", 4, 0],
-    ["Glyceryl-3-Diisostearate", 4, 0],
-    ["Hexadecyl Alcohol", 4, 0],
-    ["Hexylene Glycol", 4, 0],
-    ["Hydrogenated Lanolin", 4, 0],
-    ["Hydrogenated Vegetable Oil", 4, 0],
-    ["Isocetyl Alcohol", 4, 0],
-    ["Isocetyl Stearate", 4, 0],
-    ["Isodecyl Oleate", 4, 0],
-    ["Isopropyl Alcohol", 4, 0],
-    ["Isopropyl Isosterate", 4, 0],
-    ["Isopropyl Linolate", 4, 0],
-    ["Isopropyl Myristate", 4, 0],
-    ["Isopropyl Palmitate", 4, 0],
-    ["Isostearic Acid", 4, 0],
-    ["Isostearyl Alcohol", 4, 0],
-    ["Isostearyl Isostearate", 4, 0],
-    ["Isostearyl Neopentanoate", 4, 0],
-    ["Laureth-23", 4, 0],
-    ["Laureth-4", 4, 0],
-    ["Lauric Acid", 4, 0],
-    ["Menthol", 4, 0],
-    ["CMethanol", 4, 0],
-    ["Mink Oil", 4, 0],
-    ["Myreth 3 Myristate", 4, 0],
-    ["Myristic Acid", 4, 0],
-    ["Myristyl Lactate", 4, 0],
-    ["Myristyl Myristate", 4, 0],
-    ["Octyl Palmitate", 4, 0],
-    ["Octyl Stearate", 4, 0],
-    ["Oeic Acid", 4, 0],
-    ["Oleth-3", 4, 0],
-    ["Oleyl Alcohol", 4, 0],
-    ["Peach Kernel Oil", 4, 0],
-    ["PEG 16 Lanolin", 4, 0],
-    ["PEG 200 Dilaurate", 4, 0],
-    ["PEG 8 Stearate", 4, 0],
-    ["PG Monostearate", 4, 0],
-    ["Polyglyceryl-3-Dilsostearate", 4, 0],
-    ["Potassium Chloride", 4, 0],
-    ["PPG 2 Myristyl Propionate", 4, 0],
-    ["Propylene Glycol Monostearate", 4, 0],
-    ["Red Algae", 4, 0],
-    ["SD Acohol 40", 4, 0],
-    ["Shark Liver Oil", 4, 0],
-    ["Sodium Chloride", 4, 0],
-    ["Sodium Laureth Sulfate", 4, 0],
-    ["Sodium Lauryl Sulfate", 4, 0],
-    ["Solutan 16", 4, 0],
-    ["Sorbitan Oleate", 4, 0],
-    ["Soybean Oil", 4, 0],
-    ["Steareth 10", 4, 0],
-    ["Stearic Acid Tea", 4, 0],
-    ["Stearyl Heptanoate", 4, 0],
-    ["Sulfated Castor Oil", 4, 0],
-    ["Sulfated Jojoba Oil", 4, 0],
-    ["Syearyl Heptanoate", 4, 0],
-    ["Wheat Germ Glyceride", 4, 0],
-    ["Wheat Germ Oil", 4, 0],
-    ["Xylene", 4, 0],
+    ["sulfosuccinate", 4, 0],
+    ["ethanol", 4, 0],
+    ["ethoxylated lanolin", 4, 0],
+    ["ethyl alcohol", 4, 0],
+    ["ethyllhexyl palmitate", 4, 0],
+    ["flower of sulfur", 4, 0],
+    ["glyceryl stereate se", 4, 0],
+    ["glyceryl-3-diisostearate", 4, 0],
+    ["hexadecyl alcohol", 4, 0],
+    ["hexylene glycol", 4, 0],
+    ["hydrogenated lanolin", 4, 0],
+    ["hydrogenated vegetable oil", 4, 0],
+    ["isocetyl alcohol", 4, 0],
+    ["isocetyl stearate", 4, 0],
+    ["isodecyl oleate", 4, 0],
+    ["isopropyl alcohol", 4, 0],
+    ["isopropyl isosterate", 4, 0],
+    ["isopropyl linolate", 4, 0],
+    ["isopropyl myristate", 4, 0],
+    ["isopropyl palmitate", 4, 0],
+    ["isostearic acid", 4, 0],
+    ["isostearyl alcohol", 4, 0],
+    ["isostearyl isostearate", 4, 0],
+    ["isostearyl neopentanoate", 4, 0],
+    ["laureth-23", 4, 0],
+    ["laureth-4", 4, 0],
+    ["lauric acid", 4, 0],
+    ["menthol", 4, 0],
+    ["methanol", 4, 0],
+    ["mink oil", 4, 0],
+    ["myreth 3 myristate", 4, 0],
+    ["myristic acid", 4, 0],
+    ["myristyl lactate", 4, 0],
+    ["myristyl myristate", 4, 0],
+    ["octyl palmitate", 4, 0],
+    ["octyl stearate", 4, 0],
+    ["oeic acid", 4, 0],
+    ["oleth-3", 4, 0],
+    ["oleyl alcohol", 4, 0],
+    ["peach kernel oil", 4, 0],
+    ["peg 16 lanolin", 4, 0],
+    ["peg 200 dilaurate", 4, 0],
+    ["peg 8 stearate", 4, 0],
+    ["pg monostearate", 4, 0],
+    ["polyglyceryl-3-dilsostearate", 4, 0],
+    ["potassium chloride", 4, 0],
+    ["ppg 2 myristyl propionate", 4, 0],
+    ["propylene glycol monostearate", 4, 0],
+    ["red algae", 4, 0],
+    ["sd acohol 40", 4, 0],
+    ["shark liver oil", 4, 0],
+    ["sodium chloride", 4, 0],
+    ["sodium laureth sulfate", 4, 0],
+    ["sodium lauryl sulfate", 4, 0],
+    ["solutan 16", 4, 0],
+    ["sorbitan oleate", 4, 0],
+    ["soybean oil", 4, 0],
+    ["steareth 10", 4, 0],
+    ["stearic acid tea", 4, 0],
+    ["stearyl heptanoate", 4, 0],
+    ["sulfated castor oil", 4, 0],
+    ["sulfated jojoba oil", 4, 0],
+    ["syearyl heptanoate", 4, 0],
+    ["wheat germ glyceride", 4, 0],
+    ["wheat germ oil", 4, 0],
+    ["xylene", 4, 0],
 
 ]; 
 
-//console.log(ingredients); 
+console.log(ingredients.length); 
 
-const entryExample= "Acetylated Lanolin Alcohol, alcohol Denat., Algae Extract, Algin, Butyl Stereate, Butylated Hydroxyanisole, Cajeput Oil, Caprylic Acid, Carragean, Cetearyl Acohol + Ceteareth 20, Cetyl Acetate, Cocoa Butter, Coconut Butter, Coconut Oil, Colloidal Sulfur, Cotton Seed Oil, D & C Red # 17, D & C Red # 21, D & C Red # 3, D & C Red # 30, D & C Red # 36, Decyl Oleate, Dioctyl Succinate, Disodium Monooleamido PEG 2-, Sulfosuccinate, Ethanol, Ethoxylated Lanolin, Ethyl Alcohol, Ethyllhexyl Palmitate, Flower of Sulfur, Glyceryl Stereate SE, Glyceryl-3-Diisostearate, Hexadecyl Alcohol, Hexylene Glycol, Hydrogenated Lanolin, Hydrogenated Vegetable Oil, Isocetyl Alcohol, Isocetyl Stearate, Isodecyl Oleate, Isopropyl Alcohol Isopropyl Isosterate, Isopropyl Linolate, Isopropyl Myristate, Isopropyl Palmitate, Isostearic Acid, Isostearyl Alcohol, Isostearyl Isostearate, Isostearyl Neopentanoate, Laureth-23, Laureth-4, Lauric Acid, Menthol, Methanol, Mink Oil, Myreth 3 Myristate, Myristic Acid, Myristyl Lactate, Myristyl Myristate, Octyl Palmitate, Octyl Stearate, Oeic Acid, Oleth-3, Oleyl Alcohol, Peach Kernel Oil, PEG 16 Lanolin, PEG 200 Dilaurate, PEG 8 Stearate, PG Monostearate, Polyglyceryl-3-Dilsostearate, Potassium Chloride, PPG 2 Myristyl Propionate, Propylene Glycol Monostearate, Red Algae, SD Acohol 40, Shark Liver Oil Sodium Chloride, Sodium Laureth Sulfate,, Sodium Lauryl Sulfate, Solutan 16, Sorbitan Oleate, Soybean Oil, Steareth 10, Stearic Acid Tea, Stearyl Heptanoate, Sulfated Castor Oil, Sulfated Jojoba Oil, Syearyl Heptanoate, Wheat Germ Glyceride, Wheat Germ Oil, Xylene";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const entryExample= "Acetylated Lanolin, alcohol Denat., Algae Extract, Algin, Butyl Stereate, Butylated Hydroxyanisole, Cajeput Oil, Caprylic Acid, Carragean, Cetearyl Acohol + Ceteareth 20, Cetyl Acetate, Cocoa Butter, Coconut Butter, Coconut Oil, Colloidal Sulfur, Cotton Seed Oil, D & C Red # 17, D & C Red # 21, D & C Red # 3, D & C Red # 30, D & C Red # 36, Decyl Oleate, Dioctyl Succinate, Disodium Monooleamido PEG 2-, Sulfosuccinate, Ethanol, Ethoxylated Lanolin, Ethyl Alcohol, Ethyllhexyl Palmitate, Flower of Sulfur, Glyceryl Stereate SE, Glyceryl-3-Diisostearate, Hexadecyl Alcohol, Hexylene Glycol, Hydrogenated Lanolin, Hydrogenated Vegetable Oil, Isocetyl Alcohol, Isocetyl Stearate, Isodecyl Oleate, Isopropyl Alcohol Isopropyl Isosterate, Isopropyl Linolate, Isopropyl Myristate, Isopropyl Palmitate, Isostearic Acid, Isostearyl Alcohol, Isostearyl Isostearate, Isostearyl Neopentanoate, Laureth-23, Laureth-4, Lauric Acid, Menthol, Methanol, Mink Oil, Myreth 3 Myristate, Myristic Acid, Myristyl Lactate, Myristyl Myristate, Octyl Palmitate, Octyl Stearate, Oeic Acid, Oleth-3, Oleyl Alcohol, Peach Kernel Oil, PEG 16 Lanolin, PEG 200 Dilaurate, PEG 8 Stearate, PG Monostearate, Polyglyceryl-3-Dilsostearate, Potassium Chloride, PPG 2 Myristyl Propionate, Propylene Glycol Monostearate, Red Algae, SD Acohol 40, Shark Liver Oil, Sodium Chloride, Sodium Laureth Sulfate, Sodium Lauryl Sulfate, Solutan 16, Sorbitan Oleate, Soybean Oil, Steareth 10, Stearic Acid Tea, Stearyl Heptanoate, Sulfated Castor Oil, Sulfated Jojoba Oil, Syearyl Heptanoate, Wheat Germ Glyceride, Wheat Germ Oil, Xylene";
