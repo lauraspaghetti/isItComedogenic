@@ -33,10 +33,10 @@ function onSubmit(event){
     let result=  document.getElementById('ingredients');
     for (let i= 0; i < ingredients.length; i++){
          
-        let comedogenicIngredient= ingredients[i][0];
+        let comedogenicIngredient   = ingredients[i][0];
         console.log(comedogenicIngredient); 
-        let comedogenicRate= ingredients[i][1]; 
-        let irritationRate= ingredients[i][2]; 
+        let comedogenicRate         = ingredients[i][1]; 
+        let irritationRate          = ingredients[i][2]; 
 
         //console.log(`Ingredient from the list : ${comedogenicIngredient}, comedogenic rate : ${comedogenicRate}, irritation rate : ${irritationRate}`); 
 
@@ -46,16 +46,14 @@ function onSubmit(event){
             //is there any ingredients in the user's entry that matches our list of comedogenic ingredients ? 
             if (comedogenicIngredient === userEntryIngredient){
                 //Yes, so if it's comedogenic, we display it and we show its comedogenic rate 
+                result.innerHTML+=`<p>${comedogenicIngredient.toUpperCase()}</p>`; 
+                console.log("This user's entry ingredient is comedogenic or irritating"); 
                 if (comedogenicRate > 0){
-                    console.log("This user's entry ingredient is comedogenic"); 
-                    result.innerHTML+= `<p>${comedogenicIngredient.toUpperCase()}, comedogenic rate : ${comedogenicRate}</p>`; 
+                    result.innerHTML+= `<span>comedogenic rate : ${comedogenicRate} </span>`; 
                 }
-                //And if the ingredient is irritating, we display it and we show its irritation rate 
                 if (irritationRate > 0){
-                    console.log("This user's entry ingredient is irritating");
-                    result.innerHTML+= `${comedogenicIngredient.toUpperCase()}, irritation rate : ${irritationRate}`;  
-                };
-
+                    result.innerHTML+= `<span>irritation rate : ${irritationRate}</span>`; 
+                }
             }
 
         }//end of the user's entry loop
@@ -64,10 +62,9 @@ function onSubmit(event){
 
     //Once the comparison is done, if no matching ingredient is found, we want to inform the user that the composition of the product they entered is suitable for acne prone skin
     if (result.innerHTML === ""){
-
         result.innerHTML= "There is no comedogenic nor irritaing ingredient in the product you entered !"; 
         console.log("empty"); 
-     }
+    }
 
 };
 
