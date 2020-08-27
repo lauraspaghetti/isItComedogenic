@@ -1,0 +1,90 @@
+
+/*************************************/
+/*             VARIABLES             */
+/*************************************/
+
+$lg-margin          : 70px; 
+$md-margin          : 40px; 
+$sm-margin          : 25px; 
+
+$base-size-text     : 15px;
+$base-typo          : 'Domine', serif;
+$base-color-typo : seashell; 
+
+/*************************************/
+/*               MIXINS              */
+/*************************************/
+
+@mixin container($width) {
+    max-width       : $width;
+    margin          : auto;
+    text-align      : center; 
+}
+
+/*************************************/
+/*               GENERAL             */
+/*************************************/
+
+body{
+    margin           : 0;
+    font-family      : 'Domine', serif;
+    letter-spacing   : 1px;
+    color            : $base-color-typo;
+    font-size        : $base-size-text;
+    font-weight      : 300;
+    padding          : 0;
+    background-image:  radial-gradient(circle, rgba(147, 146, 145, 0.7) 62%, rgba(22,22,21,0) 100%), url("../img/aesthetic-plant-wallpaper.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-blend-mode: darken;
+}
+
+header, main, footer{
+    @include container(1200px); 
+}
+
+/*************************************/
+/*                 TYPOS             */
+/*************************************/
+
+/*
+font-family      : 'Domine', serif;
+font-family      : 'Hind', sans-serif;
+*/
+
+
+/*************************************/
+/*                TITLES             */
+/*************************************/
+
+@for $n from 1 through 6 {
+    h#{$n} {
+      font-size        : round($base-size-text * (0.3 * (10 - $n)));
+      font-family      : 'Hind', sans-serif;;
+      letter-spacing   : 2.5px;
+    }
+}
+
+/*************************************/
+/*                HEADER             */
+/*************************************/
+
+header{ 
+    margin-bottom      : $lg-margin;
+}
+
+/*************************************/
+/*                MAIN               */
+/*************************************/ 
+main{
+    // background: rgba(0, 0, 0, 0.092);
+    > p{
+        @include container(900px); 
+        line-height     : $sm-margin;
+    }
+}
+
+#ingredients{
+    margin-top          : $sm-margin;
+}
+
