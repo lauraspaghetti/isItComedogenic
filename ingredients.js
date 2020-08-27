@@ -29,7 +29,7 @@ let ingredients = [
     ["dioctyl succinate", 4, 0],
     ["disodium monooleamido peg 2-", 4, 0],
     ["sulfosuccinate", 4, 0],
-    ["ethanol", 4, 0],
+    ["ethanol", 0, 4],
     ["ethoxylated lanolin", 4, 0],
     ["ethyl alcohol", 4, 0],
     ["ethyllhexyl palmitate", 4, 0],
@@ -97,6 +97,6 @@ let ingredients = [
 
 ]; 
 
-console.log(ingredients.length); 
+//console.log(ingredients.length); 
 
 const entryExample= "Acetylated Lanolin, alcohol Denat., Algae Extract, Algin, Butyl Stereate, Butylated Hydroxyanisole, Cajeput Oil, Caprylic Acid, Carragean, Cetearyl Acohol + Ceteareth 20, Cetyl Acetate, Cocoa Butter, Coconut Butter, Coconut Oil, Colloidal Sulfur, Cotton Seed Oil, D & C Red # 17, D & C Red # 21, D & C Red # 3, D & C Red # 30, D & C Red # 36, Decyl Oleate, Dioctyl Succinate, Disodium Monooleamido PEG 2-, Sulfosuccinate, Ethanol, Ethoxylated Lanolin, Ethyl Alcohol, Ethyllhexyl Palmitate, Flower of Sulfur, Glyceryl Stereate SE, Glyceryl-3-Diisostearate, Hexadecyl Alcohol, Hexylene Glycol, Hydrogenated Lanolin, Hydrogenated Vegetable Oil, Isocetyl Alcohol, Isocetyl Stearate, Isodecyl Oleate, Isopropyl Alcohol Isopropyl Isosterate, Isopropyl Linolate, Isopropyl Myristate, Isopropyl Palmitate, Isostearic Acid, Isostearyl Alcohol, Isostearyl Isostearate, Isostearyl Neopentanoate, Laureth-23, Laureth-4, Lauric Acid, Menthol, Methanol, Mink Oil, Myreth 3 Myristate, Myristic Acid, Myristyl Lactate, Myristyl Myristate, Octyl Palmitate, Octyl Stearate, Oeic Acid, Oleth-3, Oleyl Alcohol, Peach Kernel Oil, PEG 16 Lanolin, PEG 200 Dilaurate, PEG 8 Stearate, PG Monostearate, Polyglyceryl-3-Dilsostearate, Potassium Chloride, PPG 2 Myristyl Propionate, Propylene Glycol Monostearate, Red Algae, SD Acohol 40, Shark Liver Oil, Sodium Chloride, Sodium Laureth Sulfate, Sodium Lauryl Sulfate, Solutan 16, Sorbitan Oleate, Soybean Oil, Steareth 10, Stearic Acid Tea, Stearyl Heptanoate, Sulfated Castor Oil, Sulfated Jojoba Oil, Syearyl Heptanoate, Wheat Germ Glyceride, Wheat Germ Oil, Xylene";
