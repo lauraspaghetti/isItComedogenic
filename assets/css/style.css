@@ -21,7 +21,7 @@ body {
   background-blend-mode: multiply;
 }
 
-header, main, footer {
+header, main {
   max-width: 1200px;
   margin: auto;
   text-align: center;
@@ -94,7 +94,7 @@ main > p {
   margin-top: 25px;
 }
 
-form input, form div button {
+form input {
   width: 40%;
   height: 30px;
   border-radius: 50px;
@@ -109,13 +109,19 @@ form div {
 }
 
 form div button {
-  width: 15%;
   font-family: 'Hind', sans-serif;
-  letter-spacing: 1.5px;
-  font-weight: 500;
-  background: white;
+  display: inline-block;
+  border: none;
+  padding: 7px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 30px;
   margin-top: 25px;
-  padding: 5px 2px;
 }
 
 /*************************************/
@@ -123,4 +129,7 @@ form div button {
 /*************************************/
 footer {
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
 }

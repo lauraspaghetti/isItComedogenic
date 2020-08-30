@@ -39,7 +39,7 @@ body{
     background-blend-mode   : multiply;
 }
 
-header, main, footer{
+header, main{
     @include container(1200px); 
 }
 
@@ -99,17 +99,23 @@ form{
         box-shadow          : 2px 2px 7px rgba(0, 0, 0, 0.5) inset;
         padding             : 10px 15px
     }
+
     div{
         width: 100%;
         button{
-            @extend input;
-            width: 15%;
-            font-family: 'Hind', sans-serif;
-            letter-spacing: 1.5px;
-            font-weight: 500;
-            background: rgba(255, 255, 255, 1);
-            margin-top: $sm-margin;
-            padding: 5px 2px;
+            font-family      : 'Hind', sans-serif;
+            display          : inline-block;
+            border           : none; 
+            padding          : 7px 20px; 
+            background       : rgba(255, 255, 255, 0.8); 
+            border-radius    : 50px;
+            margin           : 0 auto;
+            box-shadow       : 2px 2px 7px rgba(0, 0, 0, 0.5);
+            cursor           : pointer;
+            font-weight      : 200;
+            font-size        : $base-size-text;
+            line-height      : 30px;
+            margin-top       : $sm-margin;
         }
     }
 }
@@ -120,5 +126,9 @@ form{
 
 footer{
     width                   : 100%;
+    position                : absolute;
+    bottom                  : 0;
+    text-align              : center;
+
 }
 
