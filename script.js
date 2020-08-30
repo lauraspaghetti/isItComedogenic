@@ -30,7 +30,7 @@ function onSubmit(event){
 
     //comparing the user's entry with the ingredients array 
     // console.log(ingredients); 
-    let result=  document.getElementById('ingredients');
+    let ingredientsFound=  document.getElementById('ingredients');
     for (let i= 0; i < ingredients.length; i++){
          
         let comedogenicIngredient   = ingredients[i][0];
@@ -46,18 +46,19 @@ function onSubmit(event){
             //is there any ingredients in the user's entry that matches our list of comedogenic ingredients ? 
             if (comedogenicIngredient === userEntryIngredient){
                 //Yes, so if it's comedogenic, we display it
-                result.classList.remove('hidden'); 
-                result.innerHTML+=`<p>${comedogenicIngredient.toUpperCase()}</p>`; 
+                document.getElementById('results').classList.remove('hidden'); 
+                document.getElementById('form').classList.add('hidden'); 
+                ingredientsFound.innerHTML+=`<p>${comedogenicIngredient.toUpperCase()}</p>`; 
                 console.log("This user's entry ingredient is comedogenic or irritating"); 
                 //And is this ingredient comedogenic ?
                 if (comedogenicRate > 0){
                     //Yes, so we want to display its rate
-                    result.innerHTML+= `<span>comedogenic rate : ${comedogenicRate} </span>`; 
+                    ingredientsFound.innerHTML+= `<span>comedogenic rate : ${comedogenicRate} </span>`; 
                 }
                 //And is this ingredient irritating ?
                 if (irritationRate > 0){
                     //Yes, so we want to display its rate
-                    result.innerHTML+= `<span>irritation rate : ${irritationRate}</span>`; 
+                    ingredientsFound.innerHTML+= `<span>irritation rate : ${irritationRate}</span>`; 
                 }
             }
 
@@ -66,10 +67,15 @@ function onSubmit(event){
     }//end of the ingredient list loop
 
     //Once the comparison is done, if no matching ingredient is found, we want to inform the user that the composition of the product they entered is suitable for acne prone skin
-    if (result.innerHTML === ""){
-        result.innerHTML= "There is no comedogenic nor irritaing ingredient in the product you entered !"; 
+    if (ingredientsFound.innerHTML === ""){
+        ingredientsFound.innerHTML= "There is no comedogenic nor irritaing ingredient in the product you entered !"; 
         console.log("empty"); 
     }
+
+    //And finally, we allow the user to analyze another ingredient 
+    document.getElementById('start-again').addEventListener('click', function(){
+        window.location.reload();
+    });
 
 };
 
