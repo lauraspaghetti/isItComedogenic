@@ -11,6 +11,8 @@ $base-size-text            : 15px;
 $base-typo                 : 'Domine', serif;
 $base-color-typo           : rgb(237, 229, 223); 
 
+$base-bg                   : rgba(255, 255, 255, 0.8);
+
 /*************************************/
 /*               MIXINS              */
 /*************************************/
@@ -25,18 +27,22 @@ $base-color-typo           : rgb(237, 229, 223);
 /*               GENERAL             */
 /*************************************/
 
-body{
+*{
     margin                  : 0;
+    padding                 : 0;
+}
+
+body{
     font-family             : 'Domine', serif;
     letter-spacing          : 1px;
     color                   : $base-color-typo;
     font-size               : $base-size-text;
     font-weight             : 300;
-    padding                 : 0;
     background-image        :  radial-gradient(circle,rgba(65, 65, 65, 0.65) 80%, rgba(117, 117, 117, 0.6) 100%), url("../img/aesthetic-plant-wallpaper.jpg");
     background-size         : cover;
     background-position     : center; 
     background-blend-mode   : multiply;
+    position                : relative;
 }
 
 header, main{
@@ -49,6 +55,10 @@ a{
     &:hover{
         color: darken($base-color-typo, 15%);
     }
+}
+
+.hidden{
+    display                  : none;
 }
 
 /*************************************/
@@ -78,6 +88,7 @@ font-family                 : 'Hind', sans-serif;
 /*************************************/
 
 header{ 
+    margin-top: $sm-margin;
     margin-bottom           : $lg-margin;
 }
 
@@ -90,11 +101,22 @@ main{
     > p{
         @include container(900px); 
         line-height         : $sm-margin;
+        margin-bottom       : $md-margin;
+    }
+
+    h3{
+        margin-bottom       : $sm-margin;
     }
 }
 
 #ingredients{
+    @include container(450px); 
     margin-top              : $sm-margin;
+    background              : darken($base-bg, 50%); 
+    padding                 : 7px 9px;
+    border-radius           : 50px;
+    margin-bottom           : $lg-margin;
+    line-height             : 30px;
 }
 
 form{
@@ -103,7 +125,7 @@ form{
         height              : 30px;
         border-radius       : 50px;
         border              : none;
-        background          : rgba(255, 255, 255, 0.8); 
+        background          : $base-bg; 
         box-shadow          : 2px 2px 7px rgba(0, 0, 0, 0.5) inset;
         padding             : 10px 15px
     }
@@ -115,7 +137,7 @@ form{
             display          : inline-block;
             border           : none; 
             padding          : 7px 20px; 
-            background       : rgba(255, 255, 255, 0.8); 
+            background       : $base-bg; 
             border-radius    : 50px;
             margin           : 0 auto;
             box-shadow       : 2px 2px 7px rgba(0, 0, 0, 0.5);
@@ -136,10 +158,11 @@ form{
 /*************************************/ 
 
 footer{
+    margin-top              : $lg-margin;
     width                   : 100%;
-    position                : absolute;
+    position                : fixed;
     bottom                  : 0;
     text-align              : center;
-
+    background              : rgba(56, 56, 56, 0.3);
 }
 

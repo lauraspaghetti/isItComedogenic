@@ -7,18 +7,22 @@
 /*************************************/
 /*               GENERAL             */
 /*************************************/
-body {
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Domine', serif;
   letter-spacing: 1px;
   color: #ede5df;
   font-size: 15px;
   font-weight: 300;
-  padding: 0;
   background-image: radial-gradient(circle, rgba(65, 65, 65, 0.65) 80%, rgba(117, 117, 117, 0.6) 100%), url("../img/aesthetic-plant-wallpaper.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
+  position: relative;
 }
 
 header, main {
@@ -34,6 +38,10 @@ a {
 
 a:hover {
   color: #d1bdae;
+}
+
+.hidden {
+  display: none;
 }
 
 /*************************************/
@@ -86,6 +94,7 @@ h6 {
 /*                HEADER             */
 /*************************************/
 header {
+  margin-top: 25px;
   margin-bottom: 70px;
 }
 
@@ -97,10 +106,23 @@ main > p {
   margin: auto;
   text-align: center;
   line-height: 25px;
+  margin-bottom: 40px;
+}
+
+main h3 {
+  margin-bottom: 25px;
 }
 
 #ingredients {
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
   margin-top: 25px;
+  background: rgba(128, 128, 128, 0.8);
+  padding: 7px 9px;
+  border-radius: 50px;
+  margin-bottom: 70px;
+  line-height: 30px;
 }
 
 form input {
@@ -141,8 +163,10 @@ form div button:hover {
 /*              FOOTER               */
 /*************************************/
 footer {
+  margin-top: 70px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   text-align: center;
+  background: rgba(56, 56, 56, 0.3);
 }
