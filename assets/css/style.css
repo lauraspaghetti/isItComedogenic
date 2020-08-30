@@ -11,14 +11,14 @@ body {
   margin: 0;
   font-family: 'Domine', serif;
   letter-spacing: 1px;
-  color: seashell;
+  color: #ede5df;
   font-size: 15px;
   font-weight: 300;
   padding: 0;
-  background-image: radial-gradient(circle, rgba(147, 146, 145, 0.7) 62%, rgba(22, 22, 21, 0) 100%), url("../img/aesthetic-plant-wallpaper.jpg");
+  background-image: radial-gradient(circle, rgba(65, 65, 65, 0.65) 80%, rgba(117, 117, 117, 0.6) 100%), url("../img/aesthetic-plant-wallpaper.jpg");
   background-size: cover;
   background-position: center;
-  background-blend-mode: darken;
+  background-blend-mode: multiply;
 }
 
 header, main, footer {
@@ -31,8 +31,8 @@ header, main, footer {
 /*                 TYPOS             */
 /*************************************/
 /*
-font-family      : 'Domine', serif;
-font-family      : 'Hind', sans-serif;
+font-family                 : 'Domine', serif;
+font-family                 : 'Hind', sans-serif;
 */
 /*************************************/
 /*                TITLES             */
@@ -92,4 +92,35 @@ main > p {
 
 #ingredients {
   margin-top: 25px;
+}
+
+form input, form div button {
+  width: 40%;
+  height: 30px;
+  border-radius: 50px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5) inset;
+  padding: 10px 15px;
+}
+
+form div {
+  width: 100%;
+}
+
+form div button {
+  width: 15%;
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  background: white;
+  margin-top: 25px;
+  padding: 5px 2px;
+}
+
+/*************************************/
+/*              FOOTER               */
+/*************************************/
+footer {
+  width: 100%;
 }
