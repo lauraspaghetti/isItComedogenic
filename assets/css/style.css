@@ -18,7 +18,7 @@ body {
   color: #ede5df;
   font-size: 15px;
   font-weight: 300;
-  background-image: radial-gradient(circle, rgba(65, 65, 65, 0.65) 80%, rgba(117, 117, 117, 0.6) 100%), url("../img/aesthetic-plant-wallpaper.jpg");
+  background-image: radial-gradient(circle, rgba(60, 60, 60, 0.69) 80%, rgba(117, 117, 117, 0.6) 100%), url("../img/aesthetic-plant-wallpaper.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
@@ -95,13 +95,13 @@ h6 {
 /*************************************/
 header {
   margin-top: 25px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 /*************************************/
 /*                MAIN               */
 /*************************************/
-main > p {
+main #presentation {
   max-width: 900px;
   margin: auto;
   text-align: center;
@@ -109,23 +109,19 @@ main > p {
   margin-bottom: 40px;
 }
 
+main #presentation p {
+  margin-bottom: 25px;
+}
+
+main #presentation ul {
+  list-style: none;
+}
+
 main h3 {
   margin-bottom: 25px;
 }
 
-#ingredients {
-  max-width: 450px;
-  margin: auto;
-  text-align: center;
-  margin-top: 25px;
-  background: rgba(128, 128, 128, 0.8);
-  padding: 7px 9px;
-  border-radius: 50px;
-  margin-bottom: 70px;
-  line-height: 30px;
-}
-
-form input {
+main form input {
   width: 40%;
   height: 30px;
   border-radius: 50px;
@@ -135,11 +131,11 @@ form input {
   padding: 10px 15px;
 }
 
-form div {
+main div {
   width: 100%;
 }
 
-form div button {
+main div button {
   font-family: 'Hind', sans-serif;
   display: inline-block;
   border: none;
@@ -155,7 +151,43 @@ form div button {
   margin-top: 25px;
 }
 
-form div button:hover {
+main div button:hover {
+  background: #ede5df;
+}
+
+main #ingredients {
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
+  margin-top: 25px;
+  background: rgba(128, 128, 128, 0.8);
+  padding: 7px 9px;
+  border-radius: 50px;
+  line-height: 30px;
+}
+
+main #ingredients p:not(:first-of-type) {
+  padding-top: 25px;
+}
+
+main #ingredients + button {
+  font-family: 'Hind', sans-serif;
+  display: inline-block;
+  border: none;
+  padding: 7px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 30px;
+  margin-top: 25px;
+  margin-bottom: 70px;
+}
+
+main #ingredients + button:hover {
   background: #ede5df;
 }
 

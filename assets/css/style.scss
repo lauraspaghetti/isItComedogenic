@@ -17,10 +17,29 @@ $base-bg                   : rgba(255, 255, 255, 0.8);
 /*               MIXINS              */
 /*************************************/
 
-@mixin container($width) {
+@mixin container($width){
     max-width              : $width;
     margin                 : auto;
     text-align             : center; 
+}
+
+@mixin button{
+    font-family      : 'Hind', sans-serif;
+    display          : inline-block;
+    border           : none; 
+    padding          : 7px 20px; 
+    background       : $base-bg; 
+    border-radius    : 50px;
+    margin           : 0 auto;
+    box-shadow       : 2px 2px 7px rgba(0, 0, 0, 0.5);
+    cursor           : pointer;
+    font-weight      : 200;
+    font-size        : $base-size-text;
+    line-height      : 30px;
+    margin-top       : $sm-margin;
+    &:hover{
+        background   : $base-color-typo;
+    }
 }
 
 /*************************************/
@@ -38,7 +57,7 @@ body{
     color                   : $base-color-typo;
     font-size               : $base-size-text;
     font-weight             : 300;
-    background-image        :  radial-gradient(circle,rgba(65, 65, 65, 0.65) 80%, rgba(117, 117, 117, 0.6) 100%), url("../img/aesthetic-plant-wallpaper.jpg");
+    background-image        : radial-gradient(circle,rgba(60, 60, 60, 0.69) 80%, rgba(117, 117, 117, 0.6) 100%), url("../img/aesthetic-plant-wallpaper.jpg");
     background-size         : cover;
     background-position     : center; 
     background-blend-mode   : multiply;
@@ -53,7 +72,7 @@ a{
     color                   : $base-color-typo;
     text-decoration         : none;
     &:hover{
-        color: darken($base-color-typo, 15%);
+        color               : darken($base-color-typo, 15%);
     }
 }
 
@@ -88,8 +107,8 @@ font-family                 : 'Hind', sans-serif;
 /*************************************/
 
 header{ 
-    margin-top: $sm-margin;
-    margin-bottom           : $lg-margin;
+    margin-top              : $sm-margin;
+    margin-bottom           : $md-margin;
 }
 
 /*************************************/
@@ -98,59 +117,60 @@ header{
 
 main{
     // background: rgba(0, 0, 0, 0.092);
-    > p{
+    #presentation{
         @include container(900px); 
         line-height         : $sm-margin;
         margin-bottom       : $md-margin;
+        p{
+            margin-bottom   : $sm-margin;
+        }
+        ul{
+            list-style      : none;
+        }
     }
 
     h3{
         margin-bottom       : $sm-margin;
     }
-}
 
-#ingredients{
-    @include container(450px); 
-    margin-top              : $sm-margin;
-    background              : darken($base-bg, 50%); 
-    padding                 : 7px 9px;
-    border-radius           : 50px;
-    margin-bottom           : $lg-margin;
-    line-height             : 30px;
-}
-
-form{
-    input{
-        width               : 40%;
-        height              : 30px;
-        border-radius       : 50px;
-        border              : none;
-        background          : $base-bg; 
-        box-shadow          : 2px 2px 7px rgba(0, 0, 0, 0.5) inset;
-        padding             : 10px 15px
+    form{
+        input{
+            width               : 40%;
+            height              : 30px;
+            border-radius       : 50px;
+            border              : none;
+            background          : $base-bg; 
+            box-shadow          : 2px 2px 7px rgba(0, 0, 0, 0.5) inset;
+            padding             : 10px 15px
+        }
     }
 
     div{
         width: 100%;
         button{
-            font-family      : 'Hind', sans-serif;
-            display          : inline-block;
-            border           : none; 
-            padding          : 7px 20px; 
-            background       : $base-bg; 
-            border-radius    : 50px;
-            margin           : 0 auto;
-            box-shadow       : 2px 2px 7px rgba(0, 0, 0, 0.5);
-            cursor           : pointer;
-            font-weight      : 200;
-            font-size        : $base-size-text;
-            line-height      : 30px;
-            margin-top       : $sm-margin;
-            &:hover{
-                background   : $base-color-typo;
-            }
+            @include button;
         }
     }
+
+    #ingredients{
+        @include container(450px); 
+        margin-top              : $sm-margin;
+        background              : darken($base-bg, 50%); 
+        padding                 : 7px 9px;
+        border-radius           : 50px;
+        // margin-bottom           : $sm-margin;
+        line-height             : 30px;
+
+        p:not(:first-of-type){
+            padding-top         : $sm-margin;
+        }
+
+        & + button{
+            @include button;
+            margin-bottom        : $lg-margin;
+        }
+    }
+
 }
 
 /*************************************/
@@ -165,4 +185,3 @@ footer{
     text-align              : center;
     background              : rgba(56, 56, 56, 0.3);
 }
-
