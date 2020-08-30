@@ -45,13 +45,18 @@ function onSubmit(event){
             console.log(userEntryIngredient); 
             //is there any ingredients in the user's entry that matches our list of comedogenic ingredients ? 
             if (comedogenicIngredient === userEntryIngredient){
-                //Yes, so if it's comedogenic, we display it and we show its comedogenic rate 
+                //Yes, so if it's comedogenic, we display it
+                result.classList.remove('hidden'); 
                 result.innerHTML+=`<p>${comedogenicIngredient.toUpperCase()}</p>`; 
                 console.log("This user's entry ingredient is comedogenic or irritating"); 
+                //And is this ingredient comedogenic ?
                 if (comedogenicRate > 0){
+                    //Yes, so we want to display its rate
                     result.innerHTML+= `<span>comedogenic rate : ${comedogenicRate} </span>`; 
                 }
+                //And is this ingredient irritating ?
                 if (irritationRate > 0){
+                    //Yes, so we want to display its rate
                     result.innerHTML+= `<span>irritation rate : ${irritationRate}</span>`; 
                 }
             }
