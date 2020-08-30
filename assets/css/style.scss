@@ -43,6 +43,14 @@ header, main{
     @include container(1200px); 
 }
 
+a{
+    color                   : $base-color-typo;
+    text-decoration         : none;
+    &:hover{
+        color: darken($base-color-typo, 15%);
+    }
+}
+
 /*************************************/
 /*                 TYPOS             */
 /*************************************/
@@ -116,6 +124,9 @@ form{
             font-size        : $base-size-text;
             line-height      : 30px;
             margin-top       : $sm-margin;
+            &:hover{
+                background   : $base-color-typo;
+            }
         }
     }
 }

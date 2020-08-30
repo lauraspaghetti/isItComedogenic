@@ -27,6 +27,15 @@ header, main {
   text-align: center;
 }
 
+a {
+  color: #ede5df;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d1bdae;
+}
+
 /*************************************/
 /*                 TYPOS             */
 /*************************************/
@@ -122,6 +131,10 @@ form div button {
   font-size: 15px;
   line-height: 30px;
   margin-top: 25px;
+}
+
+form div button:hover {
+  background: #ede5df;
 }
 
 /*************************************/
