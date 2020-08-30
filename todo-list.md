@@ -5,7 +5,7 @@
 
 ## HTML  
 
-1. Add a description paragraph 🚀  
+1. Add a description paragraph ✅  
 2. Add the git profile link ✅  
 
 ## Style  
@@ -19,8 +19,8 @@
 
 ## Bugs  
 
-1. Add a start again btn  
-2. Make the input required  
+1. Add a start again btn ✅  
+2. Make the input required 🚀  
 3. Prevent the bg image to move when the results are displayed  
 
 ## Improvements  
