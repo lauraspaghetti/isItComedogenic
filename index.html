@@ -12,15 +12,28 @@
         <h1>Is it comedogenic ?</h1>
     </header>
     <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quia, pariatur omnis cupiditate cumque odio, magnam aliquam illo iusto aliquid, accusamus aut error. Pariatur eveniet iure exercitationem fuga voluptatibus et!</p>
-        <h3>Enter the composition of the product :</h3>
-        <form action="" id="product-form">
-            <input type="textarea" id="compo" name="compo">
-            <div>
-                <button type="submit" id="submit" onClick='retrieve()'>Check it out</button>
-            </div>
-        </form>
-        <div id="ingredients" class="hidden"></div>
+        <div id="presentation">
+            <p>Comedogenic (pore-clogging) and irritative ingredients are the last thing you want for your skin-care. It can lead to breakouts and/or worsen your acne. But don't worry, we are here to help you !</p>
+            <p>Copy and paste the composition of the product of choice in the filed below. Our alogorithm will be able to tell you if there is any comedogenic or irritating ingredient in it. </p>
+            <p>Their rates are ranked between 1 and 5.</p>
+            <ul>
+            <li>1 : "slightly comedogenic/slightly irritating."</li>
+            <li>5 : "very comedogenic/very irritating".</li>
+            </ul>
+        </div>
+        <div id="form">
+            <h3>Enter the composition of the product :</h3>
+            <form action="" id="product-form">
+                <input type="textarea" id="compo" name="compo">
+                <div>
+                    <button type="submit" id="submit" onClick='retrieve()'>Check it out</button>
+                </div>
+            </form>
+        </div>
+        <div id="results" class="hidden">
+            <div id="ingredients"></div>
+            <button id="start-again">Analyze another product</button>
+        </div>
     </main>
     <footer>
         <h3>Powered by <a href="https://github.com/lauraspaghetti" target="_blank">@lauraspaghetti</a></h3>
